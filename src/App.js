@@ -11,7 +11,7 @@ export default function App() {
                 <Route path="/" element={<MainLayout />} >
                     <Route index element={<Postlist />} />
                 </Route>
-                <Route path="/postlist/edit" element={<MainLayout />} >
+                <Route path="postlist/edit/" element={<MainLayout />} >
                     <Route path=":id" element={<PostEdit />} />
                 </Route>
             </Routes>

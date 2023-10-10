@@ -40,13 +40,17 @@ export default function CreatePost() {
     }
 
     return (
-        <div className="card-body">
+        <div className="form">
+            <textarea ref={contentInput} type="text" className="form-control mb-2"placeholder="Que esta pasando?" />
+            <div className="d-flex mb-3">
             <input ref={nameInput} type="text" className="form-control mb-2" placeholder="add name" />
-            <input ref={avatarInput} type="text" className="form-control mb-2" placeholder="add avatar" />
+            <input ref={avatarInput} type="text" className="form-control mb-2" placeholder="add avatar"/>
             <input ref={userInput} type="text" className="form-control mb-2" placeholder="add username" />
             <input ref={dateInput} type="text" className="form-control mb-2" placeholder="date" />
-            <textarea ref={contentInput} type="text" className="form-control mb-2" placeholder="Que esta pasando" />
-            <button className="btn btn-primary" onClick={() => createPost()}>Create</button>
+            </div>
+            <div className="d-flex justify-content-center mb-5">
+            <button className="button-post mt-2" onClick={() => createPost()}>Postear</button>
+            </div>
         </div>
     )
 }

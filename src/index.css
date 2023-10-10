@@ -22,6 +22,7 @@ button {
     height: 1000px;
     background-color: #00acee ;
     transition: width 0.4s;
+    z-index: 1;
 }
 
 .sidebar.open {
@@ -108,8 +109,75 @@ aside {
 }
 
 /* Estilos del contenido principal */
-main {
+/* main {
     display:grid;
+    justify-content: center;
+} */
+
+.card-tittle__user {
+    font-size: 14px;
+    color: darkgrey;
+    margin-left: 5px;
+}
+
+.section-container{
+    width: 100%;
+    display:grid
+}
+
+.nav-container{
+    width: 100px;
+    background-color: aquamarine;
+}
+
+.main-container {
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.mainLayout {
+    width: 100%;
+    display: flex;
     justify-content: center;
 }
 
+.offcanvas {
+    background-color: #00acee ;
+}
+
+.button-post {
+    width: 160px;
+    background-color: #37c6ff ;
+    height: 40px;
+    color: #fff;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.button-post:hover{
+    font-size: 17px;
+    background-color: #0398d2 ;
+}
+
+.button-offcanvas{
+    background-color: none;
+    padding: 5px;
+}
+
+.button-offcanvas__image {
+    width: 40px;
+}
+
+.offcanvas-body {
+    color: #fff;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-tittle__user {
+    font-weight: 100;
+}

@@ -4,29 +4,29 @@ const initialState = {
     posts: [
         {
             id: 0,
-            avatar: "Aqui va el avatar de Abraham",
+            avatar: "https://ca.slack-edge.com/TCRFJBKB6-U038A83ACS0-6e1d55959f5a-512",
             name: "Abraham Covarrubias",
             user: "@abrahamcovarrubias",
-            content: "",
-            date: "",
+            content: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+            date: "09/10/2023",
             done: false
         },
         {
             id: 1,
-            avatar: "Aqui va el avatar de Andrew",
-            name: "Andrew",
+            avatar: "https://ca.slack-edge.com/TCRFJBKB6-U05P8LLAWHH-67c03e6ab491-512",
+            name: "Andrew Rosales",
             user: "@andrewMentor",
-            content: "",
-            date: "",
+            content: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+            date: "10/10/2023",
             done: false
         },
         {
             id: 2,
-            avatar: "Aqui va el avatar de Alexis",
-            name: "Alexis Salazar",
-            user: "@aalexsal",
-            content: "",
-            date: "",
+            avatar: "https://ca.slack-edge.com/TCRFJBKB6-U0275TN36E8-db6aee7f44f9-512",
+            name: "Emilio de Leon  ",
+            user: "@emmi007",
+            content: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+            date: "11/10/2023",
             done: false
         }
     ]
@@ -36,10 +36,14 @@ const postReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case actionTypes.ADD_POST:
-            return {
+ /*            return {
                 ...state,
                 posts: [...state.posts, action.payload]
-            };
+            }; */
+            return {
+                ...state,
+                posts: [action.payload, ...state.posts]
+              };
         case actionTypes.REMOVE_POST:
             return {
                 ...state,

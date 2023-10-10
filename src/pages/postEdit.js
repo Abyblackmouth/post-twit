@@ -18,7 +18,7 @@ export default function PostEdit() {
     const postContentInput = useRef(null)
     const postDateInput = useRef(null)
 
-    function postEdit(){
+    function finishEdit(){
         const editedPost = {
             id: Number(id),
             avatar: postAvatarInput.current.value,
@@ -45,7 +45,7 @@ export default function PostEdit() {
     },[id])
 
     return (
-        <div className="TodoPost">
+        <div className="postEdit">
             {
                 activePost.name ? (
                     <>
@@ -59,7 +59,7 @@ export default function PostEdit() {
                         <label htmlfor="postContent">que esta pasando</label>
                         <input ref={postContentInput} className="from-control" id="postContent" defaultValue={activePost.content}/>
                     </div>
-                    <button className="btn btn-primary btn-sm pull-right" onClick={()=> postEdit()}>Finish Edit</button>
+                    <button className="btn btn-primary btn-sm pull-right" onClick={()=> finishEdit()}>Finish Edit</button>
                     <p>Status: {activePost.content}</p>
                     </>
                 ) : ( 'Loading...')
